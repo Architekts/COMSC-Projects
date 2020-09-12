@@ -1,0 +1,61 @@
+package projects;
+
+import java.util.Scanner;
+
+public class RockPaperScissors {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Please enter 0 for rock, 1 for paper, or 2 for scissors: ");
+
+        	int answer = input.nextInt();
+        	// answer chooser
+        switch(answer) {
+        case 0:
+            System.out.println("You chose Rock");
+            break;
+        case 1:
+            System.out.println("You chose Paper.");
+            break;
+        case 2:
+            System.out.println("You chose Scissors.");
+            break;
+        default:
+            System.out.println("Doug");
+        }
+        
+        // picks the computer answer
+        	
+        	double ourRandomNumber = Math.random()*3;
+        
+        	int ComputerChoice = (int)(ourRandomNumber);
+
+        // oh god heres the mess
+        // the correct choices
+        
+        	if(ComputerChoice == 0 && answer == 1) {
+        System.out.println("Paper beats rock, you win!");}
+        
+        	else if(ComputerChoice == 1 && answer == 2){
+        System.out.println("Scissors beats paper, you win!");}
+        
+        	else if(ComputerChoice == 2 && answer == 0){
+        System.out.println("Rock beats scissors, you win!");}
+        
+        	else if(ComputerChoice == answer ){System.out.println("Tie!");}
+        
+        
+        else {
+        		if(ComputerChoice == 0) {
+        			System.out.println("The Computer beat you with Rock"); }
+        		
+        		else if(ComputerChoice == 1) {
+        			System.out.println("The Computer beat you with Paper");}
+        		
+        		else if(ComputerChoice == 2) {
+        			System.out.println("The Computer beat you with Scissors");}
+        		
+        }
+	}
+}
